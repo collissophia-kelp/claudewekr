@@ -1,11 +1,11 @@
 {
   "scoring_weights": {
     "integration": 0.35,
-    "high_value_crop": 0.25,
-    "registration_ease": 0.20,
-    "scale_potential": 0.15,
+    "high_value_crop": 0.2,
+    "registration_ease": 0.1,
+    "scale_potential": 0.3,
     "strategic_leverage": 0.05,
-    "penalty_complexity": -0.10
+    "penalty_complexity": -0.1
   },
   "tier_thresholds": {
     "tier_1_min": 4.0,
@@ -13,10 +13,10 @@
     "tier_3_min": 2.5
   },
   "revenue_assumptions": {
-    "coverage_pct": 0.80,
+    "coverage_pct": 0.8,
     "application_rate_litres_per_ha": 2,
     "applications_per_season": 3,
-    "price_per_litre_eur": 7.50
+    "price_per_litre_eur": 7.5
   },
   "pipeline_stages": {
     "L0": "Pre-Pipeline / Watch List",
