@@ -1,0 +1,79 @@
+{
+  "criteria": {
+    "integration": {
+      "name": "Vertical Integration",
+      "description": "Degree to which the company owns or controls farmland and can mandate agronomic practices",
+      "weight": 0.35,
+      "scores": {
+        "0": "No farming operations; pure trader/distributor",
+        "1": "Minimal integration; sources from independent growers only",
+        "2": "Some contract farming but no owned land",
+        "3": "Owns some farmland; mix of owned and contracted supply",
+        "4": "Significant owned farmland with centralised agronomy decisions",
+        "5": "Fully integrated; owns/controls majority of farmland, can mandate practices across operations"
+      }
+    },
+    "high_value_crop": {
+      "name": "High-Value Crop Exposure",
+      "description": "Value-at-stake based on the economics of the company's primary crops",
+      "weight": 0.25,
+      "scores": {
+        "0": "No relevant crops (e.g., animal feed only)",
+        "1": "Low-value commodity crops with thin margins",
+        "2": "Mix of commodity and moderate-value crops",
+        "3": "Moderate-value crops (e.g., citrus, soybean)",
+        "4": "High-value crops (e.g., grapes, avocado, berries)",
+        "5": "Premium high-value crops with strong ROI case for biostimulants (e.g., table grapes, blueberries)"
+      }
+    },
+    "registration_ease": {
+      "name": "Registration Ease",
+      "description": "Ease of EU regulatory pathway for Stimblue+ in the company's primary markets",
+      "weight": 0.20,
+      "scores": {
+        "0": "Markets with no biostimulant regulatory framework",
+        "1": "Complex registration in all primary markets",
+        "2": "Mixed; some markets easy, others difficult",
+        "3": "Moderate registration complexity; established pathways exist",
+        "4": "Straightforward registration in most markets; EU-aligned",
+        "5": "EU-based or EU-aligned markets with clear biostimulant regulation"
+      }
+    },
+    "scale_potential": {
+      "name": "Scale Potential",
+      "description": "Size of the company's farming footprint and degree of centralisation",
+      "weight": 0.15,
+      "scores": {
+        "0": "No meaningful scale (<100 ha or equivalent)",
+        "1": "Small footprint (<1,000 ha)",
+        "2": "Moderate footprint (1,000-5,000 ha)",
+        "3": "Significant footprint (5,000-20,000 ha)",
+        "4": "Large footprint (20,000-100,000 ha) with centralised procurement",
+        "5": "Very large footprint (>100,000 ha) with highly centralised decision-making"
+      }
+    },
+    "strategic_leverage": {
+      "name": "Strategic Leverage",
+      "description": "Brand value and reference potential for Kelp Blue's commercial credibility",
+      "weight": 0.05,
+      "scores": {
+        "0": "Unknown brand; no reference value",
+        "1": "Known locally but limited international recognition",
+        "2": "Recognised regional player",
+        "3": "Well-known national brand with industry presence",
+        "4": "Major international brand; strong reference value",
+        "5": "Global household name; partnership would be transformative for credibility"
+      }
+    },
+    "penalty_complexity": {
+      "name": "Procurement Complexity Penalty",
+      "description": "Penalty for overly complex procurement structures that slow adoption",
+      "weight": -0.10,
+      "scores": {
+        "0": "Simple, centralised procurement; single decision-maker",
+        "-1": "Moderately complex; regional procurement committees or multi-layer approvals",
+        "-2": "Highly complex; fragmented procurement across many subsidiaries or co-ops"
+      }
+    }
+  }
+}

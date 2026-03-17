@@ -1,0 +1,49 @@
+{
+  "scoring_weights": {
+    "integration": 0.35,
+    "high_value_crop": 0.25,
+    "registration_ease": 0.20,
+    "scale_potential": 0.15,
+    "strategic_leverage": 0.05,
+    "penalty_complexity": -0.10
+  },
+  "tier_thresholds": {
+    "tier_1_min": 4.0,
+    "tier_2_min": 3.2,
+    "tier_3_min": 2.5
+  },
+  "revenue_assumptions": {
+    "coverage_pct": 0.80,
+    "application_rate_litres_per_ha": 2,
+    "applications_per_season": 3,
+    "price_per_litre_eur": 7.50
+  },
+  "pipeline_stages": {
+    "L0": "Pre-Pipeline / Watch List",
+    "L1": "Identified Target",
+    "L2": "Active Engagement",
+    "L3": "Qualifying Opportunity",
+    "L4": "Defining Contract",
+    "L5": "Under Contract"
+  },
+  "regions": [
+    "Western Europe",
+    "Eastern Europe",
+    "North America",
+    "Latin America",
+    "Sub-Saharan Africa",
+    "North Africa & Middle East",
+    "South Asia",
+    "East Asia",
+    "Southeast Asia",
+    "Oceania"
+  ],
+  "exclusion_categories": [
+    "Animal feed",
+    "Restaurant/QSR",
+    "Seed company",
+    "Dairy-only",
+    "Aquaculture",
+    "Bankrupt/Dissolved"
+  ]
+}
