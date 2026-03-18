@@ -1,0 +1,283 @@
+{
+  "crops": [
+    {
+      "crop": "Soybean",
+      "country": "Brazil",
+      "currency": "BRL",
+      "yield_per_ha": 3.5,
+      "price_per_tonne": 2200,
+      "cost_per_ha": 4500,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Soybean",
+      "country": "Argentina",
+      "currency": "ARS",
+      "yield_per_ha": 3.0,
+      "price_per_tonne": 350000,
+      "cost_per_ha": 650000,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Soybean",
+      "country": "USA",
+      "currency": "USD",
+      "yield_per_ha": 3.4,
+      "price_per_tonne": 480,
+      "cost_per_ha": 850,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Corn",
+      "country": "Brazil",
+      "currency": "BRL",
+      "yield_per_ha": 6.0,
+      "price_per_tonne": 1400,
+      "cost_per_ha": 5200,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Corn",
+      "country": "USA",
+      "currency": "USD",
+      "yield_per_ha": 11.0,
+      "price_per_tonne": 210,
+      "cost_per_ha": 1100,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Corn",
+      "country": "Argentina",
+      "currency": "ARS",
+      "yield_per_ha": 8.5,
+      "price_per_tonne": 180000,
+      "cost_per_ha": 550000,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Wheat",
+      "country": "France",
+      "currency": "EUR",
+      "yield_per_ha": 7.5,
+      "price_per_tonne": 240,
+      "cost_per_ha": 900,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Wheat",
+      "country": "Australia",
+      "currency": "AUD",
+      "yield_per_ha": 2.0,
+      "price_per_tonne": 380,
+      "cost_per_ha": 550,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Wheat",
+      "country": "USA",
+      "currency": "USD",
+      "yield_per_ha": 3.4,
+      "price_per_tonne": 270,
+      "cost_per_ha": 650,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Table Grapes",
+      "country": "Chile",
+      "currency": "CLP",
+      "yield_per_ha": 22.0,
+      "price_per_tonne": 1800000,
+      "cost_per_ha": 12000000,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Table Grapes",
+      "country": "Peru",
+      "currency": "PEN",
+      "yield_per_ha": 25.0,
+      "price_per_tonne": 6500,
+      "cost_per_ha": 45000,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Table Grapes",
+      "country": "South Africa",
+      "currency": "ZAR",
+      "yield_per_ha": 20.0,
+      "price_per_tonne": 28000,
+      "cost_per_ha": 180000,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Bananas",
+      "country": "Costa Rica",
+      "currency": "USD",
+      "yield_per_ha": 50.0,
+      "price_per_tonne": 520,
+      "cost_per_ha": 8500,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Bananas",
+      "country": "Philippines",
+      "currency": "PHP",
+      "yield_per_ha": 40.0,
+      "price_per_tonne": 18000,
+      "cost_per_ha": 250000,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Coffee",
+      "country": "Brazil",
+      "currency": "BRL",
+      "yield_per_ha": 1.8,
+      "price_per_tonne": 28000,
+      "cost_per_ha": 18000,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Coffee",
+      "country": "Colombia",
+      "currency": "COP",
+      "yield_per_ha": 1.2,
+      "price_per_tonne": 12000000,
+      "cost_per_ha": 8500000,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Sugarcane",
+      "country": "Brazil",
+      "currency": "BRL",
+      "yield_per_ha": 80.0,
+      "price_per_tonne": 140,
+      "cost_per_ha": 6800,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Sugarcane",
+      "country": "South Africa",
+      "currency": "ZAR",
+      "yield_per_ha": 65.0,
+      "price_per_tonne": 750,
+      "cost_per_ha": 25000,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Potato",
+      "country": "USA",
+      "currency": "USD",
+      "yield_per_ha": 45.0,
+      "price_per_tonne": 180,
+      "cost_per_ha": 4200,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Potato",
+      "country": "Netherlands",
+      "currency": "EUR",
+      "yield_per_ha": 42.0,
+      "price_per_tonne": 200,
+      "cost_per_ha": 3800,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Blueberries",
+      "country": "Chile",
+      "currency": "CLP",
+      "yield_per_ha": 12.0,
+      "price_per_tonne": 5500000,
+      "cost_per_ha": 18000000,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Blueberries",
+      "country": "USA",
+      "currency": "USD",
+      "yield_per_ha": 10.0,
+      "price_per_tonne": 6200,
+      "cost_per_ha": 22000,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Strawberries",
+      "country": "USA",
+      "currency": "USD",
+      "yield_per_ha": 50.0,
+      "price_per_tonne": 3800,
+      "cost_per_ha": 65000,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Strawberries",
+      "country": "Spain",
+      "currency": "EUR",
+      "yield_per_ha": 40.0,
+      "price_per_tonne": 2800,
+      "cost_per_ha": 42000,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Tobacco",
+      "country": "Brazil",
+      "currency": "BRL",
+      "yield_per_ha": 2.2,
+      "price_per_tonne": 18000,
+      "cost_per_ha": 14000,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Tobacco",
+      "country": "USA",
+      "currency": "USD",
+      "yield_per_ha": 2.8,
+      "price_per_tonne": 4500,
+      "cost_per_ha": 5500,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Pineapples",
+      "country": "Costa Rica",
+      "currency": "USD",
+      "yield_per_ha": 70.0,
+      "price_per_tonne": 280,
+      "cost_per_ha": 6500,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Citrus",
+      "country": "South Africa",
+      "currency": "ZAR",
+      "yield_per_ha": 35.0,
+      "price_per_tonne": 4500,
+      "cost_per_ha": 55000,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Citrus",
+      "country": "Spain",
+      "currency": "EUR",
+      "yield_per_ha": 30.0,
+      "price_per_tonne": 350,
+      "cost_per_ha": 4200,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Avocado",
+      "country": "Mexico",
+      "currency": "MXN",
+      "yield_per_ha": 10.0,
+      "price_per_tonne": 42000,
+      "cost_per_ha": 180000,
+      "stimblue_cost_per_ha": 45
+    },
+    {
+      "crop": "Avocado",
+      "country": "Chile",
+      "currency": "CLP",
+      "yield_per_ha": 9.0,
+      "price_per_tonne": 2200000,
+      "cost_per_ha": 8500000,
+      "stimblue_cost_per_ha": 45
+    }
+  ]
+}
