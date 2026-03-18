@@ -3,7 +3,7 @@
 from fastapi import APIRouter, HTTPException, Query
 
 from backend.models.schemas import CompanySummary, CompanyDetail, ScoreUpdate
-from backend.services.data_service import list_companies, get_company_detail, update_company_scores
+from backend.services.data_service import list_companies, get_company_detail, update_company_scores, create_company
 
 router = APIRouter(prefix="/api/companies", tags=["companies"])
 
@@ -40,3 +40,11 @@ def patch_scores(company_name: str, updates: ScoreUpdate):
     if not result:
         raise HTTPException(status_code=404, detail=f"Company '{company_name}' not found")
     return result
+
+
+@router.post("", response_model=CompanyDetail, status_code=201)
+def add_company(data: dict):
+    """Add a new company."""
+    if not data.get("company_name"):
+        raise HTTPException(status_code=400, detail="company_name is required")
+    return create_company(data)

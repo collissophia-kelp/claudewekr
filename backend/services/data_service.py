@@ -357,3 +357,106 @@ def get_market_share() -> list[MarketShareData]:
         ))
 
     return results
+
+
+def update_scoring_config(updates: dict) -> dict:
+    """Update scoring weights and/or tier thresholds and persist."""
+    from engine.config import save_config
+    config = get_config()
+
+    if "scoring_weights" in updates:
+        config["scoring_weights"].update(updates["scoring_weights"])
+    if "tier_thresholds" in updates:
+        config["tier_thresholds"].update(updates["tier_thresholds"])
+    if "revenue_assumptions" in updates:
+        config["revenue_assumptions"].update(updates["revenue_assumptions"])
+
+    save_config(config)
+    return config
+
+
+def what_if_scoring(weight_overrides: dict) -> list[CompanySummary]:
+    """Simulate score changes with different weights. Does NOT persist."""
+    config = get_config()
+    sim_config = json.loads(json.dumps(config))
+    sim_config["scoring_weights"].update(weight_overrides)
+
+    companies = get_companies()
+    active = [c for c in companies if not c.excluded]
+
+    results = []
+    for c in active:
+        ws_val, tier, tier_label = score_company(c, sim_config)
+        rev = calculate_revenue(c, sim_config)
+        results.append(CompanySummary(
+            company_name=c.company_name,
+            hq_country=c.hq_country,
+            region=c.region,
+            business_type=c.business_type,
+            main_crops=c.main_crops,
+            tier=tier,
+            tier_label=tier_label,
+            weighted_score=round(ws_val, 2),
+            pipeline_stage=c.pipeline_stage,
+            pipeline_owner=c.pipeline_owner,
+            hectares_controlled=c.hectares_controlled,
+            projected_revenue=round(rev, 2),
+            tags=c.tags,
+            excluded=c.excluded,
+        ))
+
+    results.sort(key=lambda x: -x.weighted_score)
+    return results
+
+
+def create_company(data: dict) -> CompanyDetail:
+    """Create a new company and persist."""
+    config = get_config()
+    companies = get_companies()
+
+    c = Company(
+        company_name=data["company_name"],
+        hq_country=data.get("hq_country", ""),
+        region=data.get("region", ""),
+        business_type=data.get("business_type", ""),
+        countries_with_controlled_farms=data.get("countries_with_controlled_farms", ""),
+        main_crops=data.get("main_crops", []),
+        score_integration=data.get("score_integration", 0),
+        score_high_value_crop=data.get("score_high_value_crop", 0),
+        score_registration_ease=data.get("score_registration_ease", 0),
+        score_scale_potential=data.get("score_scale_potential", 0),
+        score_strategic_leverage=data.get("score_strategic_leverage", 0),
+        penalty_complexity=data.get("penalty_complexity", 0),
+        pipeline_stage=data.get("pipeline_stage", "L1"),
+        pipeline_owner=data.get("pipeline_owner", ""),
+        hectares_controlled=data.get("hectares_controlled", 0),
+        notes=data.get("notes", ""),
+    )
+
+    companies.append(c)
+    save_companies(companies, DEFAULT_COMPANIES_PATH)
+    return _to_detail(c, config)
+
+
+def get_currency_rate(from_currency: str, to_currency: str) -> dict:
+    """Get exchange rate between two currencies."""
+    market = get_market_data()
+    rates = market.get("exchange_rates_to_eur", {})
+
+    from_upper = from_currency.upper()
+    to_upper = to_currency.upper()
+
+    from_to_eur = rates.get(from_upper, 1.0)
+    to_to_eur = rates.get(to_upper, 1.0)
+
+    if to_to_eur == 0:
+        rate = 0
+    else:
+        rate = from_to_eur / to_to_eur
+
+    return {
+        "from": from_upper,
+        "to": to_upper,
+        "rate": round(rate, 6),
+        "inverse": round(1 / rate, 6) if rate > 0 else 0,
+    }
