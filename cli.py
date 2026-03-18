@@ -736,6 +736,17 @@ def export(output, min_stage):
     console.print(f"[bold green]Exported to {output}[/bold green]")
 
 
+@cli.command(name="export-docx")
+@click.option("--output", "-o", default="target_list.docx", help="Output file path")
+def export_docx(output):
+    """Generate a board-ready Word document."""
+    from data_io.word_export import export_docx as _export_docx
+
+    config, companies = _load()
+    _export_docx(companies, config, output)
+    console.print(f"[bold green]Exported to {output}[/bold green]")
+
+
 # ── Import ───────────────────────────────────────────────────────────
 
 
